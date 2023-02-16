@@ -1,0 +1,30 @@
+ALGORITHM Trier a Sentence
+VAR
+    sentence  : STRING  ;
+    Nwords , Ncaracter , Nvowels , i : INTEGER :=0 ;   
+     
+BEGIN
+    write("Write a Sentence");
+
+    Read  (sentence);
+    FOR i FROM 0 TO sentence.length -1 STEP 1  DO
+        
+        IF (sentence[i]<> " " or ".")  THEN
+            Ncaracter := Ncaracter+1;
+        END_IF
+      
+        IF (sentence[i] = "a" OR "o" OR  "i" OR "u" OR "e" OR = "y") THEN
+        Nvowels := Nvowels+1;
+        END_IF
+        
+        IF((sentence[i]:=" " OR ". ") AND Ncaracter <> 0)
+        Nwords := Nwords+1;
+        END_IF
+    END_FOR
+
+    Write(Nwords)
+    Write(Ncaracter)
+    Write(Nvowels)
+
+END
+
